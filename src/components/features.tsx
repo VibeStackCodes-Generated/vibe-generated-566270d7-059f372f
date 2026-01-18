@@ -26,8 +26,9 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section aria-labelledby="features-heading" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        <h2 id="features-heading" className="sr-only">Key Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => {
             const Icon = feature.icon
@@ -37,7 +38,7 @@ export function Features() {
                 className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 hover:border-emerald-500/50"
               >
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/0 to-emerald-500/0 transition-all duration-300 group-hover:from-emerald-500/5 group-hover:to-emerald-500/0" />
-                <div className="relative mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-500/20 group-hover:scale-110 group-hover:rotate-3">
+                <div className="relative mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-500/20 group-hover:scale-110 group-hover:rotate-3" aria-hidden="true">
                   <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 <h3 className="relative mb-3 text-xl font-semibold text-foreground">

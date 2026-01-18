@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
+    <section aria-label="Hero" className="relative min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/30">
       {/* Animated Candlestick Chart Background */}
       <CandlestickChart />
 

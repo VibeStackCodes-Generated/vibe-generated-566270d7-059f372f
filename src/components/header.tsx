@@ -19,12 +19,12 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+            <a href="/" className="flex items-center gap-2" aria-label="ApexTrade Home">
+              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center" aria-hidden="true">
                 <TrendingUp className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">ApexTrade</span>
-            </div>
+            </a>
 
             {/* Desktop Navigation Links */}
             <ul className="hidden md:flex items-center gap-8">
@@ -47,7 +47,7 @@ export function Header() {
 
             {/* CTA Button & Mobile Menu Toggle */}
             <div className="flex items-center gap-4">
-              <button className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30">
+              <button className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30" aria-label="Get Started with ApexTrade">
                 Get Started
               </button>
 
@@ -55,12 +55,13 @@ export function Header() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden text-white hover:text-emerald-500 transition-colors"
-                aria-label="Toggle menu"
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6" aria-hidden="true" />
                 ) : (
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-6 h-6" aria-hidden="true" />
                 )}
               </button>
             </div>
@@ -121,9 +122,9 @@ function StockTicker() {
   const duplicatedStocks = [...stocks, ...stocks]
 
   return (
-    <div className="bg-[#0A192F]/95 border-b border-white/10 overflow-hidden">
+    <div className="bg-[#0A192F]/95 border-b border-white/10 overflow-hidden" role="region" aria-label="Stock ticker">
       <div className="relative h-10 flex items-center">
-        <div className="animate-marquee flex gap-8 whitespace-nowrap will-change-transform">
+        <div className="animate-marquee flex gap-8 whitespace-nowrap will-change-transform" aria-live="off">
           {duplicatedStocks.map((stock, index) => (
             <div
               key={`${stock.symbol}-${index}`}

@@ -79,9 +79,9 @@ const comparisonData: ComparisonRow[] = [
 const renderCellValue = (value: string | boolean) => {
   if (typeof value === 'boolean') {
     return value ? (
-      <Check className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+      <Check className="h-5 w-5 text-emerald-600 dark:text-emerald-400" aria-label="Available" />
     ) : (
-      <X className="h-5 w-5 text-muted-foreground" />
+      <X className="h-5 w-5 text-muted-foreground" aria-label="Not available" />
     )
   }
   return value
@@ -89,13 +89,13 @@ const renderCellValue = (value: string | boolean) => {
 
 export function FeeComparison() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8">
+    <section aria-labelledby="fee-comparison-heading" className="py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
             Compare & Save
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 id="fee-comparison-heading" className="text-3xl md:text-4xl font-bold mb-4">
             See How We Stack Up
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

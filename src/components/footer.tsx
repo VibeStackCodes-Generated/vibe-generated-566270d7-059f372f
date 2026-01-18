@@ -48,12 +48,12 @@ export function Footer() {
           {/* Company Info - Takes 2 columns on large screens */}
           <div className="lg:col-span-2">
             {/* Logo */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+            <a href="/" className="flex items-center gap-2 mb-4" aria-label="ApexTrade Home">
+              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center" aria-hidden="true">
                 <TrendingUp className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">ApexTrade</span>
-            </div>
+            </a>
 
             {/* Description */}
             <p className="text-slate-400 text-sm mb-6 max-w-sm">
@@ -63,7 +63,7 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-slate-400 text-sm">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4" aria-hidden="true" />
                 <a
                   href="mailto:support@apextrade.com"
                   className="hover:text-emerald-500 transition-colors"
@@ -89,8 +89,8 @@ export function Footer() {
           </div>
 
           {/* Product Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Product</h3>
+          <nav aria-labelledby="footer-product">
+            <h3 id="footer-product" className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
@@ -103,11 +103,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Company Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+          <nav aria-labelledby="footer-company">
+            <h3 id="footer-company" className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -120,11 +120,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Legal Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Legal</h3>
+          <nav aria-labelledby="footer-legal">
+            <h3 id="footer-legal" className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
@@ -137,11 +137,11 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Support Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
+          <nav aria-labelledby="footer-support">
+            <h3 id="footer-support" className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
@@ -154,7 +154,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
         </div>
 
         {/* Bottom Bar */}
