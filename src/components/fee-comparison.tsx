@@ -130,24 +130,24 @@ export function FeeComparison() {
             </TableHeader>
             <TableBody>
               {comparisonData.map((row, index) => (
-                <TableRow key={index}>
+                <TableRow key={index} className="transition-all duration-200 hover:bg-muted/30">
                   <TableCell className="font-medium">{row.feature}</TableCell>
-                  <TableCell className="bg-emerald-50 dark:bg-emerald-950/30 text-center font-semibold text-emerald-700 dark:text-emerald-400">
+                  <TableCell className="bg-emerald-50 dark:bg-emerald-950/30 text-center font-semibold text-emerald-700 dark:text-emerald-400 transition-all duration-200 hover:bg-emerald-100 dark:hover:bg-emerald-950/50">
                     <div className="flex justify-center">
                       {renderCellValue(row.apexTrade)}
                     </div>
                   </TableCell>
-                  <TableCell className="text-center text-muted-foreground">
+                  <TableCell className="text-center text-muted-foreground transition-colors duration-200">
                     <div className="flex justify-center">
                       {renderCellValue(row.broker1)}
                     </div>
                   </TableCell>
-                  <TableCell className="text-center text-muted-foreground">
+                  <TableCell className="text-center text-muted-foreground transition-colors duration-200">
                     <div className="flex justify-center">
                       {renderCellValue(row.broker2)}
                     </div>
                   </TableCell>
-                  <TableCell className="text-center text-muted-foreground">
+                  <TableCell className="text-center text-muted-foreground transition-colors duration-200">
                     <div className="flex justify-center">
                       {renderCellValue(row.broker3)}
                     </div>

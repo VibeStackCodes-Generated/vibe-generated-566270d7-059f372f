@@ -34,12 +34,13 @@ export function Features() {
             return (
               <div
                 key={feature.title}
-                className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-emerald-500/50"
+                className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 hover:border-emerald-500/50"
               >
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-colors group-hover:bg-emerald-500/20">
-                  <Icon className="h-6 w-6" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/0 to-emerald-500/0 transition-all duration-300 group-hover:from-emerald-500/5 group-hover:to-emerald-500/0" />
+                <div className="relative mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-500/20 group-hover:scale-110 group-hover:rotate-3">
+                  <Icon className="h-6 w-6 transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-foreground">
+                <h3 className="relative mb-3 text-xl font-semibold text-foreground">
                   {feature.title.split(feature.highlight).map((part, i) =>
                     i === 0 ? (
                       <span key={i}>
@@ -51,7 +52,7 @@ export function Features() {
                     )
                   )}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="relative text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>

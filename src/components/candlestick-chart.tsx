@@ -87,9 +87,9 @@ export function CandlestickChart() {
   }, [])
 
   return (
-    <div className="absolute inset-0 overflow-hidden opacity-20">
+    <div className="absolute inset-0 overflow-hidden opacity-20 animate-fade-in">
       <svg
-        className="w-full h-full"
+        className="w-full h-full animate-slide-up"
         viewBox="0 0 1200 400"
         preserveAspectRatio="none"
       >

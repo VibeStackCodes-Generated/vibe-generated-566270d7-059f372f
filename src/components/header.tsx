@@ -33,7 +33,7 @@ export function Header() {
                   <a
                     href={link.href}
                     onClick={() => setActiveLink(link.href)}
-                    className={`text-sm font-medium transition-colors hover:text-emerald-500 ${
+                    className={`text-sm font-medium transition-all duration-300 hover:text-emerald-500 hover:scale-105 inline-block ${
                       activeLink === link.href
                         ? 'text-emerald-500'
                         : 'text-white'
@@ -47,7 +47,7 @@ export function Header() {
 
             {/* CTA Button & Mobile Menu Toggle */}
             <div className="flex items-center gap-4">
-              <button className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+              <button className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30">
                 Get Started
               </button>
 
@@ -89,7 +89,7 @@ export function Header() {
                   </li>
                 ))}
                 <li>
-                  <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+                  <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30">
                     Get Started
                   </button>
                 </li>
@@ -123,11 +123,11 @@ function StockTicker() {
   return (
     <div className="bg-[#0A192F]/95 border-b border-white/10 overflow-hidden">
       <div className="relative h-10 flex items-center">
-        <div className="animate-marquee flex gap-8 whitespace-nowrap">
+        <div className="animate-marquee flex gap-8 whitespace-nowrap will-change-transform">
           {duplicatedStocks.map((stock, index) => (
             <div
               key={`${stock.symbol}-${index}`}
-              className="flex items-center gap-3 px-4"
+              className="flex items-center gap-3 px-4 hover:scale-105 transition-transform duration-200"
             >
               <span className="text-white font-semibold text-sm">
                 {stock.symbol}
