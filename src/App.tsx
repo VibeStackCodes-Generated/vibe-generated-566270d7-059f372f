@@ -3,6 +3,7 @@ import { VibeStackBadge } from '@/components/vibestack-badge'
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Features } from '@/components/features'
+import { TrustedBy } from '@/components/trusted-by'
 import { FeeComparison } from '@/components/fee-comparison'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Hero />
       <Features />
+      <TrustedBy />
       <FeeComparison />
       <Toaster position="bottom-right" />
       <VibeStackBadge />
