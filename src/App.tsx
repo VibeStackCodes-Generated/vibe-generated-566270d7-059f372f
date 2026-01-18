@@ -5,6 +5,7 @@ import { Hero } from '@/components/hero'
 import { Features } from '@/components/features'
 import { TrustedBy } from '@/components/trusted-by'
 import { FeeComparison } from '@/components/fee-comparison'
+import { Footer } from '@/components/footer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Features />
       <TrustedBy />
       <FeeComparison />
+      <Footer />
       <Toaster position="bottom-right" />
       <VibeStackBadge />
     </div>
