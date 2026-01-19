@@ -13,7 +13,7 @@ interface Candle {
 export function CandlestickChart() {
   const [candles, setCandles] = useState<Candle[]>([])
   const [offset, setOffset] = useState(0)
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
   const lastUpdateRef = useRef<number>(0)
 
   // Generate initial candles
